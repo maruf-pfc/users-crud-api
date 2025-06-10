@@ -2,7 +2,7 @@
     "name": "users-crud-api",
     "description": "Users CRUD API with Nodejs, Express js, PostgreSQL, Docker and Joi",
     "private": true,
-    "version": "0.0.0",
+    "version": "1.0.0",
     "type": "module",
     "main": "src/server.js",
     "scripts": {
@@ -25,7 +25,9 @@
         "dotenv": "^16.5.0",
         "express": "^5.1.0",
         "joi": "^17.13.3",
-        "pg": "^8.16.0"
+        "pg": "^8.16.0",
+        "swagger-jsdoc": "^6.2.8",
+        "swagger-ui-express": "^5.0.1"
     },
     "devDependencies": {
         "nodemon": "^3.1.10",

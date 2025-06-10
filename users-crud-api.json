@@ -1,0 +1,93 @@
+{
+  "info": {
+    "_postman_id": "ebe5429f-eab6-45b5-ab5c-6ad57db0da58",
+    "name": "users-crud-api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": ""
+  },
+  "item": [
+    {
+      "name": "Create a new user",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:5000/api/v1/user",
+          "path": ["api", "v1", "user"],
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000"
+        },
+        "body": {
+          "mode": "raw",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          },
+          "raw": "{\n  \"name\": \"Md. Maruf Sarker\",\n  \"email\": \"maruf@gmail.com\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Get all users",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5000/api/v1/users",
+          "path": ["api", "v1", "users"],
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000"
+        }
+      }
+    },
+    {
+      "name": "Update a user",
+      "request": {
+        "method": "PUT",
+        "url": {
+          "raw": "http://localhost:5000/api/v1/user/3",
+          "path": ["api", "v1", "user", "3"],
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000"
+        },
+        "body": {
+          "mode": "raw",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          },
+          "raw": "{\n  \"email\": \"asif123@gmail.com\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Delete a user",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:5000/api/v1/user/2",
+          "path": ["api", "v1", "user", "2"],
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000"
+        }
+      }
+    },
+    {
+      "name": "Get user by id",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5000/api/v1/user/1",
+          "path": ["api", "v1", "user", "1"],
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000"
+        }
+      }
+    }
+  ]
+}
