@@ -1,0 +1,8 @@
+node_modules
+dist
+pnpm-lock.yaml
+.env
+.vscode
+Dockerfile
+docker-compose.yml
+*.log

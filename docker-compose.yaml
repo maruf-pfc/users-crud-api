@@ -1,0 +1,48 @@
+# # docker-compose.yml
+
+# version: '3.9'
+
+# services:
+#   app:
+#     build: .
+#     container_name: users-crud-api
+#     ports:
+#       - "5000:5000"
+#     env_file:
+#       - .env
+#     volumes:
+#       - .:/app
+#       - /app/node_modules
+#     command: pnpm start
+
+version: '3.9'
+
+services:
+  app:
+    build: .
+    container_name: users-crud-api
+    ports:
+      - '5000:5000'
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - /app/node_modules
+    depends_on:
+      - db
+    command: pnpm start
+
+  db:
+    image: postgres:15
+    container_name: users-crud-db
+    ports:
+      - '5444:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: users-crud-db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
