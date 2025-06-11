@@ -107,9 +107,9 @@ This sets up:
 
 Base URL: `http://localhost:5000/api/v1`
 
-| Method | Endpoint     | Description          |
-| ------ | ------------ | -------------------- |
-| GET    | `/users`     | Get all users        |
+| Method | Endpoint    | Description          |
+| ------ | ----------- | -------------------- |
+| GET    | `/users`    | Get all users        |
 | GET    | `/user/:id` | Get user by ID       |
 | POST   | `/user`     | Create new user      |
 | PUT    | `/user/:id` | Update existing user |
@@ -136,7 +136,8 @@ docker-compose up --build
 
 ## ✅ To Do
 
-- [ ] Write unit and integration tests
+- [x] Write unit tests
+- [ ] Write integration tests
 - [x] Add CI/CD with GitHub Actions
 
 ## 🤝 Contributing

@@ -4,6 +4,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import pool from './configs/db.js';
 import userRoutes from './routes/userRoutes.js';
+import healthRoute from './routes/healthRoute.js';
 import errorHandler from './middlewares/errorHandler.js';
 import createUserTable from './database/createUserTable.js';
 import { swaggerSpec, swaggerUi } from './configs/swagger.js';
@@ -29,6 +30,7 @@ app.use(errorHandler);
 createUserTable();
 
 // Health check & DB info route
+app.use('/api/v1', healthRoute);
 app.get('/', async (req, res) => {
   try {
     const result = await pool.query(`SELECT current_database()`);

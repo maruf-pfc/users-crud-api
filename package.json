@@ -1,38 +1,42 @@
 {
-    "name": "users-crud-api",
-    "description": "Users CRUD API with Nodejs, Express js, PostgreSQL, Docker and Joi",
-    "private": true,
-    "version": "1.0.0",
-    "type": "module",
-    "main": "src/server.js",
-    "scripts": {
-        "start": "node src/server.js",
-        "dev": "nodemon src/server.js",
-        "format": "prettier --write .",
-        "test": "echo \"No tests yet\" && exit 0"
-    },
-    "keywords": [
-        "nodejs",
-        "expressjs",
-        "postgres",
-        "docker",
-        "joi"
-    ],
-    "author": "Md. Maruf Sarker",
-    "license": "Apache-2.0",
-    "dependencies": {
-        "chalk": "^5.4.1",
-        "cors": "^2.8.5",
-        "dotenv": "^16.5.0",
-        "express": "^5.1.0",
-        "joi": "^17.13.3",
-        "pg": "^8.16.0",
-        "swagger-jsdoc": "^6.2.8",
-        "swagger-ui-express": "^5.0.1"
-    },
-    "devDependencies": {
-        "nodemon": "^3.1.10",
-        "prettier": "3.5.3"
-    },
-    "packageManager": "pnpm@10.6.5+sha512.cdf928fca20832cd59ec53826492b7dc25dc524d4370b6b4adbf65803d32efaa6c1c88147c0ae4e8d579a6c9eec715757b50d4fa35eea179d868eada4ed043af"
+  "name": "users-crud-api",
+  "description": "Users CRUD API with Nodejs, Express js, PostgreSQL, Docker and Joi",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "format": "prettier --write .",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --detectOpenHandles",
+    "test:integration": "cross-env NODE_OPTIONS=\"--import ./jest.setup.js --experimental-vm-modules\" jest --config jest.integration.config.js --runInBand"
+  },
+  "keywords": [
+    "nodejs",
+    "expressjs",
+    "postgres",
+    "docker",
+    "joi"
+  ],
+  "author": "Md. Maruf Sarker",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "joi": "^17.13.3",
+    "pg": "^8.16.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "jest": "^30.0.0",
+    "nodemon": "^3.1.10",
+    "prettier": "3.5.3",
+    "supertest": "^7.1.1"
+  },
+  "packageManager": "pnpm@10.6.5+sha512.cdf928fca20832cd59ec53826492b7dc25dc524d4370b6b4adbf65803d32efaa6c1c88147c0ae4e8d579a6c9eec715757b50d4fa35eea179d868eada4ed043af"
 }

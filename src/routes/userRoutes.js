@@ -36,7 +36,6 @@ import { userSchema } from '../validations/userValidation.js';
  *                 $ref: '#/components/schemas/User'
  *       500:
  *         description: Server error
- * /user:
  *   post:
  *     summary: Create a new user
  *     tags: [Users]
@@ -60,7 +59,7 @@ import { userSchema } from '../validations/userValidation.js';
 
 /**
  * @swagger
- * /user/{id}:
+ * /users/{id}:
  *   get:
  *     summary: Get a user by ID
  *     tags: [Users]
@@ -176,9 +175,9 @@ import { userSchema } from '../validations/userValidation.js';
  */
 
 router.get('/users', getAllUsers);
-router.get('/user/:id', getUserById);
-router.post('/user', validate(userSchema), createUser);
-router.put('/user/:id', validate(userSchema), updateUser);
-router.delete('/user/:id', deleteUser);
+router.get('/users/:id', getUserById);
+router.post('/users', validate(userSchema), createUser);
+router.put('/users/:id', validate(userSchema), updateUser);
+router.delete('/users/:id', deleteUser);
 
 export default router;
