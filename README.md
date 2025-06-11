@@ -110,10 +110,10 @@ Base URL: `http://localhost:5000/api/v1`
 | Method | Endpoint    | Description          |
 | ------ | ----------- | -------------------- |
 | GET    | `/users`    | Get all users        |
-| GET    | `/user/:id` | Get user by ID       |
-| POST   | `/user`     | Create new user      |
-| PUT    | `/user/:id` | Update existing user |
-| DELETE | `/user/:id` | Delete a user        |
+| GET    | `/users/:id` | Get user by ID       |
+| POST   | `/users`     | Create new user      |
+| PUT    | `/users/:id` | Update existing user |
+| DELETE | `/users/:id` | Delete a user        |
 
 ## 🧪 Swagger Docs
 
